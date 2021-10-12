@@ -1,41 +1,38 @@
+import java.io.*;
 import java.util.*;
 
 public class Main{
 
-public static void main(String[] args) {
+public static void main(String[] args) throws Exception {
+    // write your code here
     Scanner scn = new Scanner(System.in);
-
-     // write ur code here
-     int n = scn.nextInt();
-     int high = n;
-     int low = 1;
-     for(int i = 1 ; i<=n ; i++){
-         for(int j = 1 ; j<=n ; j++){
-             if(i==1){
-                 System.out.print("*\t");
-             }else if(i>1 && i<=n/2){
-                 if(j==high || j==low){
-                     System.out.print("*\t");
-                 }else{
-                     System.out.print("\t");
-                 }
-             }else if(i>n/2){
-                 if(j>=low && j<=high){
-                     System.out.print("*\t");
-                 }else{
-                     System.out.print("\t");
-                 }
-             }
-         }
-         System.out.println();
-         if(i<=n/2){
-             high--;
-             low++;
-         }else{
-             high++;
-             low--;
-         }
-     }
-
+    int n1 = scn.nextInt();
+    int arr1[] = new int[n1];
+    for(int i = 0 ; i < arr1.length ; i++){
+        arr1[i] = scn.nextInt();
+    }
+    int n2 = scn.nextInt();
+    int arr2[] = new int[n2];
+    for(int j = 0 ; j < arr2.length ; j++){
+        arr2[j] = scn.nextInt();
+    }
+    int diff[] = new int[n2];
+    int i = arr1.length - 1;
+    int j = arr2.length - 1;
+    int k = diff.length - 1;
+    while(k>=0){
+        if(arr2[j] > arr1[i]){
+            diff[k] = arr2[j] - arr1[i];
+            System.out.println(diff[k]);
+        }else{
+            diff[k] = arr2[j]+10 - arr1[i];
+            System.out.println(diff[k]);
+            arr2[j-1] -= 1;
+        }
+        i--;
+        j--;
+        k--;
+    }
  }
+
 }
