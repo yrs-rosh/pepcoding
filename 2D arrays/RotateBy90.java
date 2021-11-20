@@ -15,11 +15,13 @@ public class Main {
 
   public static void rowrev(int[][] arr) {
     for (int i = 0; i < arr.length; i++) {
+        int first =0;
       int last = arr[i].length - 1;
-      for (int j = 0; j <= last / 2; j++) {
-        int temp = arr[i][j];
-        arr[i][j] = arr[i][last];
+      while(first <= last) {
+        int temp = arr[i][first];
+        arr[i][first] = arr[i][last];
         arr[i][last] = temp;
+        first++;
         last--;
       }
     }
