@@ -15,13 +15,17 @@ public class Main {
     }
 
     int x = sc.nextInt();
-    for (int i = 0 ; i < arr.length ; i++) {
-      for (int j = 0 ; j < arr[0].length ; j++) {
-        if (arr[i][j] == x) {
-          System.out.println(i);
-          System.out.println(j);
-          return;
-        }
+    int k = 0;
+    int l = arr[0].length - 1;
+    while (k < arr.length && l >= 0) {
+      if (x == arr[k][l]) {
+        System.out.println(k);
+        System.out.println(l);
+        return;
+      } else if (x > arr[k][l]) {
+        k++;
+      } else if (x < arr[k][l]) {
+        l--;
       }
     }
     System.out.println("Not Found");
