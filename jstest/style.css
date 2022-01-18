@@ -1,0 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    margin-top: 30vh;
+    height: 10vh;
+    width: 10vw;
+}

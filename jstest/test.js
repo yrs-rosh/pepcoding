@@ -1,18 +1,11 @@
-const num = 3849;
-
-function reverseGivenInteger(num) {
-    // write your solution here
-    let ans = 0;
-    let rem = 0;
-
-    while(num!=0){
-        rem = num%10;
-        
-        ans = ans*10 + rem;
-        num = Mathnum/10;
-    }
-
-    return ans;
+var audio = new Audio("123.mp3");
+var play = document.getElementById("play")
+play.onmouseover = function() {
+  audio.play();
+  document.body.style.backgroundColor ='black';
 }
 
-console.log(`Reversed integer is: ${reverseGivenInteger(num)}`)
+play.onmouseout = function() {
+    audio.pause();
+    document.body.style.backgroundColor ='white';
+  }
