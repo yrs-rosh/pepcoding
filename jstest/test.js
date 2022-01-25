@@ -1,11 +1,24 @@
-var audio = new Audio("123.mp3");
-var play = document.getElementById("play")
-play.onmouseover = function() {
-  audio.play();
-  document.body.style.backgroundColor ='black';
+let audio = new Audio("123.mp3");
+let btn = document.getElementById("play");
+let flag = true;
+const player = () => {
+    if(audio.paused){
+        btn.onclick = () =>{
+            document.body.style.backgroundColor="grey";
+            btn.innerHTML = '<i class="fas fa-pause-circle"></i>'
+            console.log("jdhgysf");
+            audio.play();
+        }
+    } else{
+        btn.onclick = () =>{
+            document.body.style.backgroundColor="white";
+            btn.innerHTML = '<i class="fas fa-play-circle"></i>'
+            console.log("playing");
+            audio.pause();
+        }
+    }
+    
 }
+// audio.play();
 
-play.onmouseout = function() {
-    audio.pause();
-    document.body.style.backgroundColor ='white';
-  }
+player();
