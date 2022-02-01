@@ -14,7 +14,7 @@ const player = () => {
             document.body.style.backgroundColor="white";
             btn.innerHTML = '<i class="fas fa-play-circle"></i>'
             console.log("playing");
-            audio.pause();
+            audio.pause()/*hhuu */; 
         }
     }
     
