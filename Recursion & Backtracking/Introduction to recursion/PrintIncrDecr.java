@@ -11,26 +11,12 @@ public class Main {
   }
 
   public static void pdi(int n) {
-    decrease(n);
-    increase(n);
-  }
-
-  public static void increase(int n) {
-
-    if (n == 0) {
-      return;
-    }
-    increase(n - 1);
-    System.out.println(n);
-  }
-
-  public static void decrease(int n) {
-
     if (n == 0) {
       return;
     }
     System.out.println(n);
-    decrease(n - 1);
+    pdi(n - 1);
+    System.out.println(n);
   }
 
 }
