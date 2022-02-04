@@ -1,4 +1,0 @@
-Test your code by 
-
-1. replace class name from Main to your file name
-2. run your code
